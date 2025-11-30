@@ -1,27 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('partials/header') %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 <style>
-  .about-nav { position:sticky; top:100px; }
-  .about-nav a { color:#005eb8; font-weight:600; }
-  .about-nav a:hover, .about-nav a.active { color:#00a7e1; }
-  .timeline { border-left:4px solid #00a7e1; padding-left:30px; position:relative; }
-  .timeline-item { margin-bottom:40px; position:relative; }
-  .timeline-item::before { content:''; position:absolute; left:-12px; top:8px; width:20px; height:20px; background:#00a7e1; border-radius:50%; border:5px solid white; box-shadow:0 0 0 4px #00a7e1; }
-  .leadership-card img { object-fit:cover; width:100%; height:220px; }
-  @media (max-width:992px) {
-    .about-nav { position:static; top:auto; }
-    .about-nav .list-group-item { border:none; background:transparent; }
+  /* Responsive fixes */
+  .about-nav {
+    position: sticky;
+    top: 80px;
+    z-index: 100;
+    background: white;
+    padding-top: 1rem;
+  }
+  @media (max-width: 991px) {
+    .about-nav {
+      position: static;
+      top: auto;
+      background: transparent;
+      padding-top: 0;
+    }
+    .about-nav .list-group-item {
+      border: none !important;
+      background: #f8f9fa !important;
+      border-radius: 12px !important;
+      margin-bottom: 8px;
+      text-align: center;
+      font-weight: 600;
+    }
+  }
+
+  /* Fully responsive timeline */
+  .timeline-container {
+    position: relative;
+    padding: 3rem 0;
+  }
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: linear-gradient(to bottom, #00a7e1, #005eb8);
+    border-radius: 3px;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+  @media (max-width: 768px) {
+    .timeline-line { left: 30px; }
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 5rem;
+  }
+  .timeline-dot {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border: 6px solid;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 768px) {
+    .timeline-dot {
+      left: 0;
+      transform: translateX(-50%);
+    }
+  }
+
+  .timeline-content {
+    width: 100%;
+    padding: 0 80px;
+  }
+  @media (max-width: 768px) {
+    .timeline-content {
+      padding-left: 80px;
+      padding-right: 20px;
+    }
+  }
+
+  .timeline-year {
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 10px 24px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   }
 </style>
+
 <body>
   <%- include('partials/navbar') %>
 
   <!-- HERO -->
-  <section class="hero text-white text-center" style="background:linear-gradient(rgba(0,94,184,0.9),rgba(0,94,184,0.95)),url('/img/about-master-hero.jpg') center/cover no-repeat; min-height:70vh; display:flex; align-items:center;">
+  <section class="hero text-white text-center d-flex align-items-center justify-content-center" style="background:linear-gradient(rgba(0,94,184,0.92),rgba(0,94,184,0.95)),url('/img/about-master-hero.jpg') center/cover no-repeat; min-height:70vh;">
     <div class="container">
-      <h1 class="display-2 fw-bold">About Make-A-Wish</h1>
-      <p class="lead fs-3">Tens of thousands of volunteers, donors and supporters help us grant the wish of every child diagnosed with a critical illness.</p>
+      <h1 class="display-3 fw-bold mb-3">About Make-A-Wish</h1>
+      <p class="lead fs-4">Tens of thousands of volunteers, donors and supporters help us grant the wish of every child diagnosed with a critical illness.</p>
     </div>
   </section>
 
@@ -29,16 +112,16 @@
     <div class="container">
       <div class="row">
 
-        <!-- STICKY SIDE NAVIGATION -->
-        <div class="col-lg-3 about-nav">
+        <!-- RESPONSIVE NAVIGATION -->
+        <div class="col-lg-3 about-nav mb-4 mb-lg-0">
           <div class="list-group list-group-flush">
-            <a href="#mission"      class="list-group-item list-group-item-action py-3">Our Mission</a>
-            <a href="#history"      class="list-group-item list-group-item-action py-3">Our History</a>
-            <a href="#timeline"     class="list-group-item list-group-item-action py-3">Timeline</a>
-            <a href="#structure"    class="list-group-item list-group-item-action py-3">Local & Global Structure</a>
-            <a href="#funds"        class="list-group-item list-group-item-action py-3">Managing Our Funds</a>
-            <a href="#leadership"   class="list-group-item list-group-item-action py-3">Leadership</a>
-            <a href="#careers"      class="list-group-item list-group-item-action py-3">Careers</a>
+            <a href="#mission"     class="list-group-item list-group-item-action py-3">Our Mission</a>
+            <a href="#history"     class="list-group-item list-group-item-action py-3">Our History</a>
+            <a href="#timeline"    class="list-group-item list-group-item-action py-3">Timeline</a>
+            <a href="#structure"   class="list-group-item list-group-item-action py-3">Local & Global Structure</a>
+            <a href="#funds"       class="list-group-item list-group-item-action py-3">Managing Our Funds</a>
+            <a href="#leadership"  class="list-group-item list-group-item-action py-3">Leadership</a>
+            <a href="#careers"     class="list-group-item list-group-item-action py-3">Careers</a>
           </div>
         </div>
 
@@ -58,15 +141,16 @@
             <p class="fs-5 mb-4">For children diagnosed with critical illnesses, a wish come true can be a crucial turning point. This impact is why we are driven to make every eligible child’s wish come true.</p>
 
             <div class="row align-items-center g-5 mb-5">
-              <div class="col-md-6">
+              <div class="col-md-6 order-2 order-md-1">
                 <h3>1980 – Chris Greicius</h3>
                 <p>Make-A-Wish traces its inspiration to Christopher James Greicius, a 7-year-old boy battling leukemia who wished to be a police officer. In 1980, his Phoenix community made it happen. Chris passed away just days later, but his wish created a movement that has transformed millions of lives.</p>
                 <blockquote class="fst-italic text-muted border-start border-primary border-5 ps-4 mt-4">
-                  “He was only seven years, 269 days old when he died. But he taught me about being a man, even though he was only a boy.”<br><small>— Tommy Austin, Make-A-Wish co-founder</small>
+                  “He was only seven years, 269 days old when he died. But he taught me about being a man, even though he was only a boy.”<br>
+                  <small>— Tommy Austin, Make-A-Wish co-founder</small>
                 </blockquote>
               </div>
-              <div class="col-md-6">
-                <img src="/img/chris-greicius.jpg" class="img-fluid rounded shadow" alt="Chris Greicius">
+              <div class="col-md-6 order-1 order-md-2 text-center">
+                <img src="/img/chris-greicius.jpg" class="img-fluid rounded shadow w-100" alt="Chris Greicius">
               </div>
             </div>
 
@@ -74,114 +158,74 @@
             <p>Frank “Bopsy” Salazar, age 7, became the first official Make-A-Wish child. The Phoenix and Anaheim Fire Departments made him a firefighter and took his family to Disneyland — the very first Disney wish.</p>
           </div>
 
-          <!-- TIMELINE -->
-          <!-- TIMELINE – UPGRADED & GORGEOUS -->
-<div id="timeline" class="mb-5 pb-5">
-  <h2 class="text-primary fw-bold text-center mb-5 display-5">Our Journey of Hope</h2>
+          <!-- TIMELINE – FULLY RESPONSIVE -->
+          <div id="timeline" class="mb-5 pb-5">
+            <h2 class="text-primary fw-bold text-center mb-5 display-5">Our Journey of Hope</h2>
+            <div class="timeline-container">
+              <div class="timeline-line"></div>
 
-  <div class="container position-relative">
-    <!-- Vertical Line -->
-    <div class="position-absolute top-0 bottom-0 start-50 translate-middle-x" style="width:6px; background:linear-gradient(to bottom, #00a7e1, #005eb8); border-radius:3px; z-index:1;"></div>
+              <!-- 1980 -->
+              <div class="timeline-item">
+                <div class="timeline-dot border-primary"><i class="bi bi-star-fill text-primary fs-3"></i></div>
+                <div class="timeline-content text-lg-end text-start" style="margin-left:50%;">
+                  <div class="timeline-year bg-primary text-white">1980</div>
+                  <h4>Chris Greicius’ Wish</h4>
+                  <p class="text-muted">A 7-year-old boy’s dream to be a police officer sparked a global movement.</p>
+                </div>
+              </div>
 
-    <div class="row g-5">
+              <!-- 1981 -->
+              <div class="timeline-item">
+                <div class="timeline-dot border-danger"><i class="bi bi-heart-fill text-danger fs-3"></i></div>
+                <div class="timeline-content text-lg-start" style="margin-right:50%;">
+                  <div class="timeline-year bg-danger text-white">1981</div>
+                  <h4>First Official Wish</h4>
+                  <p class="text-muted">Frank “Bopsy” Salazar becomes the first official wish kid.</p>
+                </div>
+              </div>
 
-      <!-- 1980 -->
-      <div class="col-12 col-lg-6">
-        <div class="d-flex flex-row-reverse flex-lg-row align-items-center">
-          <div class="flex-grow-1 text-end text-lg-start pe-lg-5">
-            <div class="timeline-year bg-primary text-white rounded-pill d-inline-block px-4 py-2 shadow-lg">1980</div>
-            <h4 class="mt-3">Chris Greicius’ Wish</h4>
-            <p class="text-muted">A 7-year-old boy battling leukemia wished to be a police officer. His community made it happen — and unknowingly sparked a global movement.</p>
-          </div>
-          <div class="timeline-dot bg-white border border-5 border-primary rounded-circle shadow" style="width:60px; height:60px; z-index:2; flex-shrink:0;">
-            <i class="bi bi-star-fill text-primary fs-3 position-absolute top-50 start-50 translate-middle"></i>
-          </div>
-          <div class="d-none d-lg-block" style="width:50%;"></div>
-        </div>
-      </div>
+              <!-- 1983 -->
+              <div class="timeline-item">
+                <div class="timeline-dot border-success"><i class="bi bi-building text-success fs-3"></i></div>
+                <div class="timeline-content text-lg-end text-start" style="margin-left:50%;">
+                  <div class="timeline-year bg-success text-white">1983</div>
+                  <h4>Official Incorporation</h4>
+                  <p class="text-muted">Make-A-Wish Foundation of America is officially born.</p>
+                </div>
+              </div>
 
-      <!-- 1981 -->
-      <div class="col-12 col-lg-6">
-        <div class="d-flex align-items-center">
-          <div class="d-lg-none" style="width:50%;"></div>
-          <div class="timeline-dot bg-white border border-5 border-primary rounded-circle shadow" style="width:60px; height:60px; z-index:2; flex-shrink:0;">
-            <i class="bi bi-heart-fill text-danger fs-3 position-absolute top-50 start-50 translate-middle"></i>
-          </div>
-          <div class="flex-grow-1 ps-lg-5 text-start">
-            <div class="timeline-year bg-danger text-white rounded-pill d-inline-block px-4 py-2 shadow-lg">1981</div>
-            <h4 class="mt-3">First Official Wish</h4>
-            <p class="text-muted">Frank “Bopsy” Salazar becomes the first official wish kid — a firefighter for a day and the very first Disney wish.</p>
-          </div>
-        </div>
-      </div>
+              <!-- 1993 -->
+              <div class="timeline-item">
+                <div class="timeline-dot border-warning"><i class="bi bi-globe text-warning fs-3"></i></div>
+                <div class="timeline-content text-lg-start" style="margin-right:50%;">
+                  <div class="timeline-year bg-warning text-dark">1993</div>
+                  <h4>Going Global</h4>
+                  <p class="text-muted">Make-A-Wish International is formed — now serving 50 countries.</p>
+                </div>
+              </div>
 
-      <!-- 1983 -->
-      <div class="col-12 col-lg-6">
-        <div class="d-flex flex-row-reverse flex-lg-row align-items-center">
-          <div class="flex-grow-1 text-end text-lg-start pe-lg-5">
-            <div class="timeline-year bg-success text-white rounded-pill d-inline-block px-4 py-2 shadow-lg">1983</div>
-            <h4 class="mt-3">Official Incorporation</h4>
-            <p class="text-muted">Make-A-Wish Foundation of America is officially born.</p>
-          </div>
-          <div class="timeline-dot bg-white border border-5 border-success rounded-circle shadow" style="width:60px; height:60px; z-index:2;">
-            <i class="bi bi-building fs-3 position-absolute top-50 start-50 translate-middle text-success"></i>
-          </div>
-          <div class="d-none d-lg-block" style="width:50%;"></div>
-        </div>
-      </div>
+              <!-- 2020 -->
+              <div class="timeline-item">
+                <div class="timeline-dot border-info"><i class="bi bi-cake2-fill text-info fs-3"></i></div>
+                <div class="timeline-content text-lg-end text-start" style="margin-left:50%;">
+                  <div class="timeline-year bg-info text-white">2020</div>
+                  <h4>40 Years of Wishes</h4>
+                  <p class="text-muted">Over 500,000 wishes granted worldwide.</p>
+                </div>
+              </div>
 
-      <!-- 1993 -->
-      <div class="col-12 col-lg-6">
-        <div class="d-flex align-items-center">
-          <div class="d-lg-none" style="width:50%;"></div>
-          <div class="timeline-dot bg-white border border-5 border-warning rounded-circle shadow" style="width:60px; height:60px; z-index:2;">
-            <i class="bi bi-globe fs-3 position-absolute top-50 start-50 translate-middle text-warning"></i>
+              <!-- 2025 & Beyond -->
+              <div class="timeline-item">
+                <div class="timeline-dot border-primary" style="width:80px;height:80px;"><i class="bi bi-stars text-primary fs-1"></i></div>
+                <div class="timeline-content text-lg-start" style="margin-right:50%;">
+                  <div class="timeline-year bg-primary text-white fs-4">2025 & Beyond</div>
+                  <h4>The Journey Continues</h4>
+                  <p class="fw-bold">With supporters like YOU, we’re granting more wishes than ever.</p>
+                  <a href="/donate" class="btn btn-wish mt-3">Be Part of Our Future</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex-grow-1 ps-lg-5 text-start">
-            <div class="timeline-year bg-warning text-dark rounded-pill d-inline-block px-4 py-2 shadow-lg">1993</div>
-            <h4 class="mt-3">Going Global</h4>
-            <p class="text-muted">Make-A-Wish International is formed — now serving 50 countries.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 2020 -->
-      <div class="col-12 col-lg-6">
-        <div class="d-flex flex-row-reverse flex-lg-row align-items-center">
-          <div class="flex-grow-1 text-end text-lg-start pe-lg-5">
-            <div class="timeline-year bg-info text-white rounded-pill d-inline-block px-4 py-2 shadow-lg">2020</div>
-            <h4 class="mt-3">40 Years of Wishes</h4>
-            <p class="text-muted">Celebrating 40 years and over 500,000 wishes granted worldwide.</p>
-          </div>
-          <div class="timeline-dot bg-white border border-5 border-info rounded-circle shadow" style="width:60px; height:60px; z-index:2;">
-            <i class="bi bi-cake2-fill text-info fs-3 position-absolute top-50 start-50 translate-middle"></i>
-          </div>
-          <div class="d-none d-lg-block" style="width:50%;"></div>
-        </div>
-      </div>
-
-      <!-- 2025 – Today -->
-      <div class="col-12 col-lg-6">
-        <div class="d-flex align-items-center">
-          <div class="d-lg-none" style="width:50%;"></div>
-          <div class="timeline-dot bg-white border border-5 border-primary rounded-circle shadow position-relative" style="width:80px; height:80px; z-index:2;">
-            <i class="bi bi-stars text-primary fs-1 position-absolute top-50 start-50 translate-middle"></i>
-          </div>
-          <div class="flex-grow-1 ps-lg-5 text-start">
-            <div class="timeline-year bg-primary text-white rounded-pill d-inline-block px-4 py-3 shadow-lg fs-4">2025 & Beyond</div>
-            <h4 class="mt-3">The Journey Continues</h4>
-            <p class="text-muted fw-bold">With supporters like YOU, Make-A-Wish is growing stronger every day — granting more wishes than ever before.</p>
-            <a href="/donate" class="btn btn-wish mt-3">Be Part of Our Future</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
-<!-- Add Bootstrap Icons (add once in header if not already) -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
           <!-- LOCAL & GLOBAL STRUCTURE -->
           <div id="structure" class="mb-5 pb-5 border-bottom">
@@ -198,17 +242,17 @@
           <!-- MANAGING OUR FUNDS -->
           <div id="funds" class="mb-5 pb-5 border-bottom">
             <h2 class="text-primary fw-bold mb-4">Managing Our Funds</h2>
-            <div class="row text-center">
-              <div class="col-md-4 mb-4">
-                <h1 class="text-success fw-bold">86¢</h1>
-                <p class="fs-5">of every dollar goes directly to granting wishes and program services</p>
+            <div class="row text-center g-4">
+              <div class="col-12 col-md-4">
+                <h1 class="text-success fw-bold display-4">86¢</h1>
+                <p class="fs-5">of every dollar goes directly to granting wishes</p>
               </div>
-              <div class="col-md-4 mb-4">
-                <h1 class="text-info fw-bold">4-Star</h1>
+              <div class="col-12 col-md-4">
+                <h1 class="text-info fw-bold display-4">4-Star</h1>
                 <p class="fs-5">Charity Navigator rating for 15+ years</p>
               </div>
-              <div class="col-md-4 mb-4">
-                <h1 class="text-warning fw-bold">Platinum</h1>
+              <div class="col-12 col-md-4">
+                <h1 class="text-warning fw-bold display-4">Platinum</h1>
                 <p class="fs-5">GuideStar/Candid Seal of Transparency</p>
               </div>
             </div>
@@ -219,8 +263,8 @@
             <h2 class="text-primary fw-bold mb-5">Leadership</h2>
             <div class="row g-4">
               <div class="col-md-4">
-                <div class="card leadership-card border-0 shadow">
-                  <img src="/img/R. Dominksi.jpg" alt="Sarah Johnson">
+                <div class="card border-0 shadow">
+                  <img src="/img/R. Dominksi.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="Sarah Johnson">
                   <div class="card-body text-center">
                     <h5>Sarah Johnson</h5>
                     <p class="text-muted">President & CEO</p>
@@ -228,8 +272,8 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="card leadership-card border-0 shadow">
-                  <img src="/img/PCC.png" alt="Michael Chen">
+                <div class="card border-0 shadow">
+                  <img src="/img/PCC.png" class="card-img-top" style="height:220px; object-fit:cover;" alt="Michael Chen">
                   <div class="card-body text-center">
                     <h5>Michael Chen</h5>
                     <p class="text-muted">Chief Operating Officer</p>
@@ -237,8 +281,8 @@
                 </div>
               </div>
               <div class="col-md-4">
-                <div class="card leadership-card border-0 shadow">
-                  <img src="/img/_M0I7226.jpg" alt="Emma Rodriguez">
+                <div class="card border-0 shadow">
+                  <img src="/img/_M0I7226.jpg" class="card-img-top" style="height:220px; object-fit:cover;" alt="Emma Rodriguez">
                   <div class="card-body text-center">
                     <h5>Emma Rodriguez</h5>
                     <p class="text-muted">VP of Wish Granting</p>
@@ -263,14 +307,25 @@
   <%- include('partials/footer') %>
 
   <script>
-    // Highlight active section in side nav
+    // Smooth scroll + active menu highlight
+    document.querySelectorAll('.about-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        window.scrollTo({ top: target.offsetTop - 100, behavior: 'smooth' });
+      });
+    });
+
     window.addEventListener('scroll', () => {
+      let current = '';
       document.querySelectorAll('div[id]').forEach(section => {
-        const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top <= 300) {
-          document.querySelectorAll('.about-nav a').forEach(a => a.classList.remove('active'));
-          document.querySelector(`a[href="#${section.id}"]`).classList.add('active');
+        if (window.scrollY >= section.offsetTop - 150) {
+          current = section.getAttribute('id');
         }
+      });
+      document.querySelectorAll('.about-nav a').forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href') === `#${current}`) a.classList.add('active');
       });
     });
   </script>
