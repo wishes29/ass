@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+<style>
+  .stat-box-1 { background: #ffb81c; color: #000; }
+  .stat-box-2 { background: #00a7e1; color: white; }
+  .stat-box-3 { background: #f8f9fa; }
+  .hero-curved {
+    background: linear-gradient(135deg, #005eb8 0%, #00a7e1 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-curved::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23f8f9fa' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,133.3C672,117,768,107,864,122.7C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") bottom/cover no-repeat;
+  }
+</style>
+<body>
+  <%- include('partials/navbar') %>
+
+  <!-- HERO BANNER (like the Subaru one) -->
+  <section class="hero-curved text-white py-5">
+    <div class="container py-5">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-3 fw-bold">Share the Love<br>with Make-A-Wish</h1>
+          <p class="lead">Every donation helps grant life-changing wishes to children with critical illnesses.</p>
+          <a href="/donate" class="btn btn-warning btn-lg px-5 rounded-pill shadow">Donate Now</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="/img/STL Hero Image_Levi.avif" class="img-fluid rounded shadow" alt="Wish kid smiling">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLORFUL IMPACT STATS (exactly like your screenshot) -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Box 1 -->
+        <div class="col-md-4">
+          <div class="stat-box-1 text-center p-5 rounded shadow">
+            <h2 class="display-4 fw-bold">302</h2>
+            <p class="lead fw-bold">wishes were granted last week<br>because of donors like you</p>
+          </div>
+        </div>
+
+        <!-- Box 2 -->
+        <div class="col-md-4">
+          <div class="stat-box-2 text-center p-5 rounded shadow">
+            <h2 class="display-4 fw-bold">99%</h2>
+            <p class="lead fw-bold">of doctors say wishes help relieve<br>a family from traumatic stress</p>
+          </div>
+        </div>
+
+        <!-- Box 3 -->
+        <div class="col-md-4">
+          <div class="stat-box-3 text-center p-5 rounded shadow border">
+            <h2 class="display-4 fw-bold">87%</h2>
+            <p class="lead fw-bold">of alumni say their wish was<br>a turning point in their treatment</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCTOR QUOTE SECTION (like the last screenshot) -->
+  <section class="py-5 bg-primary text-white position-relative overflow-hidden">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="display-4 fw-bold">The Impact of a Wish</h1>
+          <blockquote class="fs-3 fst-italic my-4">
+            "...there are pieces missing that can only be filled by the impact of a wish experience."
+          </blockquote>
+          <p class="fs-5">— James B. Fahner, MD, FAAP</p>
+          <a href="/stories" class="btn btn-warning btn-lg rounded-pill">Learn More</a>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="/img/Mya_5_nervous system disorder_to meet and ride a unicorn_2.avif" class="img-fluid rounded shadow" alt="Child with unicorn">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

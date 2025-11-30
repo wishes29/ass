@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<style>
+  .vol-card { transition:all .3s; border:none; }
+  .vol-card:hover { transform:translateY(-15px); box-shadow:0 20px 40px rgba(0,0,0,0.15)!important; }
+  .story-card { background:#f8f9fa; }
+</style>
+<body>
+  <%- include('partials/navbar') %>
+
+  <!-- HERO -->
+  <!-- HERO WITH REAL IMAGE BACKGROUND (no dark overlay) -->
+<section class="hero text-white text-center position-relative overflow-hidden" style="background:url('/img/volunteer.jpg') center/cover no-repeat; min-height:90vh; display:flex; align-items:center;">
+  <!-- Optional very light overlay so text stays readable -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(0,0,0,0.25);"></div>
+  
+  <div class="container position-relative z-2">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h1 class="display-1 fw-bold mb-4 text-shadow">Volunteer with Make-A-Wish</h1>
+        <p class="lead fs-2 mb-4 text-shadow">Join a caring community of more than 24,000 volunteers who transform lives</p>
+        <p class="fs-3 mb-5 text-shadow">You can make wishes come true — starting today!</p>
+        <a href="#opportunities" class="btn btn-warning btn-lg px-5 rounded-pill shadow-lg text-dark fw-bold">
+          Discover How You Can Help
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Add this tiny CSS for text shadow (makes white text pop on any photo) -->
+<style>
+  .text-shadow {
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  }
+</style>
+
+  <!-- INTRO SECTION -->
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="text-primary fw-bold mb-4">Your time and talents are critical to bringing strength and hope to wish kids</h2>
+          <p class="fs-4 text-muted">Make-A-Wish volunteers consider their work the most impactful and meaningful thing they do. By helping us get closer to granting the wish of every eligible child, our volunteers are at the heart of every wish experience — and they have the freedom to choose when and how they transform lives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VOLUNTEER OPPORTUNITIES -->
+  <section id="opportunities" class="py-5">
+    <div class="container">
+      <h2 class="text-center text-primary fw-bold mb-5 display-5">Volunteer Opportunities</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card vol-card h-100 shadow-lg text-center p-4">
+            <i class="bi bi-stars text-warning fs-1 mb-3"></i>
+            <h4>Wish Granter</h4>
+            <p class="text-muted">Meet wish kids and families, discover their one true wish, and help make it come true.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card vol-card h-100 shadow-lg text-center p-4">
+            <i class="bi bi-translate text-info fs-1 mb-3"></i>
+            <h4>Translator / Interpreter</h4>
+            <p class="text-muted">Help families communicate clearly during wish visits and translate documents.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card vol-card h-100 shadow-lg text-center p-4">
+            <i class="bi bi-building text-success fs-1 mb-3"></i>
+            <h4>Office Volunteer</h4>
+            <p class="text-muted">Support staff with research, data entry, phone calls, filing, and mailings.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card vol-card h-100 shadow-lg text-center p-4">
+            <i class="bi bi-mic-fill text-danger fs-1 mb-3"></i>
+            <h4>Speaker’s Bureau</h4>
+            <p class="text-muted">Share our mission and stories with community groups to inspire support.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card vol-card h-100 shadow-lg text-center p-4">
+            <i class="bi bi-calendar-heart text-primary fs-1 mb-3"></i>
+            <h4>Events Volunteer</h4>
+            <p class="text-muted">Plan and run magical fundraising events and wish celebrations.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+          <div class="card vol-card h-100 shadow-lg text-center p-4">
+            <i class="bi bi-tools text-secondary fs-1 mb-3"></i>
+            <h4>Skill-Based Volunteer</h4>
+            <p class="text-muted">Graphic design, photography, carpentry, landscaping, writing — use your professional skills!</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="mailto:volunteer@Make-A-Wish.org" class="btn btn-wish btn-lg px-5 shadow">Apply to Volunteer Today</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center text-primary fw-bold mb-5 display-5">Success Stories</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card story-card h-100 border-0 shadow">
+            <img src="/img/Noah_Abe-and-Family_R.jpg" class="card-img-top" alt="Jim and Kathy">
+            <div class="card-body">
+              <h5>For Jim and Kathy Donovan...</h5>
+              <p class="text-muted">There is nothing more powerful than seeing the joy on a wish kid’s face.</p>
+              <a href="#" class="text-primary">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card story-card h-100 border-0 shadow">
+            <img src="/img/Volunteer_Story_Jim-and-Kathy-2_R.jpg" class="card-img-top" alt="Noah's wish">
+            <div class="card-body">
+              <h5>Abe brought a whole construction company together...</h5>
+              <p class="text-muted">To build Noah’s dream backyard playground.</p>
+              <a href="#" class="text-primary">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card story-card h-100 border-0 shadow">
+            <img src="/img/Volunteer_Story_Ken-Kieffer_R.jpg" class="card-img-top" alt="Ken Kieffer">
+            <div class="card-body">
+              <h5>Ken has been granting wishes since 1997</h5>
+              <p class="text-muted">He still keeps in touch with families years later.</p>
+              <a href="#" class="text-primary">Read More →</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER CALL-TO-ACTION -->
+  <section class="py-5 bg-primary text-white text-center">
+    <div class="container">
+      <h2 class="fw-bold mb-4">Stay Inspired</h2>
+      <p class="lead mb-4">Sign up for our newsletter and never miss a wish story</p>
+      <form class="row justify-content-center g-3" style="max-width:600px; margin:0 auto;">
+        <div class="col-md-8">
+          <input type="email" class="form-control form-control-lg rounded-pill" placeholder="Your email address">
+        </div>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-warning btn-lg rounded-pill w-100 shadow">Subscribe</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

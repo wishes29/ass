@@ -1,0 +1,61 @@
+:root {
+  --wish-blue: #005eb8;
+  --wish-lightblue: #00a7e1;
+  --wish-yellow: #ffb81c;
+  --wish-gray: #6b7280;
+  --wish-bg: #f8f9fa;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--wish-bg);
+  color: #333;
+}
+
+.navbar {
+  background-color: white !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-brand img {
+  height: 50px;
+}
+
+.btn-wish {
+  background-color: var(--wish-blue);
+  border-color: var(--wish-blue);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.btn-wish:hover {
+  background-color: var(--wish-lightblue);
+  border-color: var(--wish-lightblue);
+}
+
+.hero {
+  background: linear-gradient(rgba(0,94,184,0.8), rgba(0,94,184,0.9)), url('../img/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 150px 0;
+  text-align: center;
+}
+
+.section-blue {
+  background-color: var(--wish-blue);
+  color: white;
+  padding: 80px 0;
+}
+
+.card-wish {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card-wish:hover {
+  transform: translateY(-10px);
+}

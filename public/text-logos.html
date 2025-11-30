@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make-A-Wish Text Logo Designs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800;900&family=Playfair+Display:wght@700;900&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      font-family: 'Poppins', sans-serif;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #005eb8;
+      margin-bottom: 50px;
+      font-size: 2.5em;
+    }
+    
+    .logo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    
+    .logo-card {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .logo-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    }
+    
+    .logo-card h3 {
+      color: #005eb8;
+      margin-bottom: 20px;
+      font-size: 1.3em;
+    }
+    
+    .logo-display {
+      padding: 30px;
+      background: #f8f9fa;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-1 {
+      font-size: 3.5em;
+      font-weight: 900;
+      background: linear-gradient(135deg, #005eb8 0%, #00a7e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-family: 'Poppins', sans-serif;
+      letter-spacing: -1px;
+    }
+    
+    .logo-2 {
+      font-size: 2.8em;
+      font-weight: 800;
+      color: #005eb8;
+      font-family: 'Playfair Display', serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    
+    .logo-2 .star {
+      color: #ffb81c;
+      font-size: 1.1em;
+    }
+    
+    .logo-3 {
+      font-size: 2.5em;
+      font-weight: 900;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #005eb8 0%, #00a7e1 100%);
+      padding: 15px 25px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    .logo-4 {
+      font-size: 3em;
+      font-weight: 900;
+      color: #005eb8;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .logo-4::before {
+      content: '✨ ';
+      color: #ffb81c;
+      font-size: 0.9em;
+    }
+    
+    .logo-4::after {
+      content: ' ✨';
+      color: #ffb81c;
+      font-size: 0.9em;
+    }
+    
+    .logo-5 {
+      font-size: 2.2em;
+      font-weight: 800;
+      color: #005eb8;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.4;
+    }
+    
+    .logo-5-make {
+      font-size: 0.9em;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #00a7e1;
+    }
+    
+    .logo-5-wish {
+      font-size: 1.8em;
+      font-weight: 900;
+      color: #005eb8;
+    }
+    
+    .logo-6 {
+      font-size: 2.5em;
+      font-weight: 900;
+      background: linear-gradient(to right, #005eb8, #00a7e1, #ffb81c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1px;
+    }
+    
+    .logo-description {
+      color: #666;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    
+    .code-section {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      margin-bottom: 40px;
+    }
+    
+    .code-section h2 {
+      color: #005eb8;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+    
+    .code-block {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-bottom: 20px;
+      border-left: 4px solid #00a7e1;
+    }
+    
+    code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.95em;
+      color: #005eb8;
+    }
+    
+    .logo-option {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .logo-option:last-child {
+      border-bottom: none;
+    }
+    
+    .usage-note {
+      background: #e3f2fd;
+      padding: 15px 20px;
+      border-radius: 8px;
+      color: #005eb8;
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Make-A-Wish Text Logo Designs</h1>
+    
+    <div class="logo-grid">
+      <!-- Logo 1: Modern Gradient -->
+      <div class="logo-card">
+        <h3>Option 1: Modern Gradient</h3>
+        <div class="logo-display">
+          <div class="logo-1">Make-A-Wish</div>
+        </div>
+        <p class="logo-description">Bold, modern gradient text. Best for hero sections and large headers. Eye-catching and professional.</p>
+      </div>
+      
+      <!-- Logo 2: Elegant Serif with Star -->
+      <div class="logo-card">
+        <h3>Option 2: Elegant Serif</h3>
+        <div class="logo-display">
+          <div class="logo-2">MAKE<span class="star">★</span>WISH</div>
+        </div>
+        <p class="logo-description">Sophisticated serif style with star accent. Great for formal contexts and print materials.</p>
+      </div>
+      
+      <!-- Logo 3: Solid Background Badge -->
+      <div class="logo-card">
+        <h3>Option 3: Solid Badge</h3>
+        <div class="logo-display">
+          <div class="logo-3">Make-A-Wish</div>
+        </div>
+        <p class="logo-description">Bold text on gradient background. Perfect for buttons, badges, and navigation elements.</p>
+      </div>
+      
+      <!-- Logo 4: With Sparkles -->
+      <div class="logo-card">
+        <h3>Option 4: Magical Sparkles</h3>
+        <div class="logo-display">
+          <div class="logo-4">Make-A-Wish</div>
+        </div>
+        <p class="logo-description">Playful design with sparkle emojis. Conveys magic and wonder, ideal for wish-focused content.</p>
+      </div>
+      
+      <!-- Logo 5: Stacked Text -->
+      <div class="logo-card">
+        <h3>Option 5: Stacked Layout</h3>
+        <div class="logo-display">
+          <div class="logo-5">
+            <div class="logo-5-make">MAKE</div>
+            <div class="logo-5-wish">A WISH</div>
+          </div>
+        </div>
+        <p class="logo-description">Vertical stacked layout. Great for square logo spaces and sidebar branding.</p>
+      </div>
+      
+      <!-- Logo 6: Rainbow Gradient -->
+      <div class="logo-card">
+        <h3>Option 6: Rainbow Gradient</h3>
+        <div class="logo-display">
+          <div class="logo-6">MAKE-A-WISH</div>
+        </div>
+        <p class="logo-description">Multi-color gradient from blue to yellow. Vibrant and playful, represents diversity and hope.</p>
+      </div>
+    </div>
+    
+    <!-- Implementation Guide -->
+    <div class="code-section">
+      <h2>💻 Implementation Guide</h2>
+      
+      <div class="logo-option">
+        <h4>Option 1: Pure CSS (Recommended)</h4>
+        <div class="code-block">
+          <code>
+&lt;style&gt;<br>
+&nbsp;&nbsp;.logo-text {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font-size: 2.5em;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font-weight: 900;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background: linear-gradient(135deg, #005eb8 0%, #00a7e1 100%);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-webkit-background-clip: text;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;-webkit-text-fill-color: transparent;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;background-clip: text;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;font-family: 'Poppins', sans-serif;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;letter-spacing: -1px;<br>
+&nbsp;&nbsp;}<br>
+&lt;/style&gt;<br>
+<br>
+&lt;h1 class="logo-text"&gt;Make-A-Wish&lt;/h1&gt;
+          </code>
+        </div>
+      </div>
+      
+      <div class="logo-option">
+        <h4>Option 2: SVG Logo (Scalable)</h4>
+        <div class="code-block">
+          <code>
+&lt;svg width="300" height="100" viewBox="0 0 300 100"&gt;<br>
+&nbsp;&nbsp;&lt;defs&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;stop offset="0%" style="stop-color:#005eb8;stop-opacity:1" /&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;stop offset="100%" style="stop-color:#00a7e1;stop-opacity:1" /&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/linearGradient&gt;<br>
+&nbsp;&nbsp;&lt;/defs&gt;<br>
+&nbsp;&nbsp;&lt;text x="150" y="70" font-family="Poppins" font-size="48"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font-weight="900" fill="url(#logoGradient)" text-anchor="middle"&gt;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Make-A-Wish<br>
+&nbsp;&nbsp;&lt;/text&gt;<br>
+&lt;/svg&gt;
+          </code>
+        </div>
+      </div>
+      
+      <div class="logo-option">
+        <h4>Option 3: Simple HTML</h4>
+        <div class="code-block">
+          <code>
+&lt;h1 style="<br>
+&nbsp;&nbsp;font-size: 2.5em;<br>
+&nbsp;&nbsp;font-weight: 900;<br>
+&nbsp;&nbsp;color: #005eb8;<br>
+&nbsp;&nbsp;font-family: 'Poppins', sans-serif;<br>
+&nbsp;&nbsp;letter-spacing: -1px;<br>
+"&gt;Make-A-Wish&lt;/h1&gt;
+          </code>
+        </div>
+      </div>
+      
+      <div class="usage-note">
+        <strong>💡 Tip:</strong> For best results, use the gradient version (Option 1) in your hero sections. Use the solid badge version (Option 3) for navigation and buttons.
+      </div>
+    </div>
+  </div>
+</body>
+</html>

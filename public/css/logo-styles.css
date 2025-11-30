@@ -1,0 +1,248 @@
+/* Make-A-Wish Text Logo Styles */
+
+/* ============================================
+   OPTION 1: Modern Gradient Logo (Recommended)
+   ============================================ */
+.logo-gradient {
+  font-size: 2.5em;
+  font-weight: 900;
+  background: linear-gradient(135deg, #005eb8 0%, #00a7e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.logo-gradient.small {
+  font-size: 1.8em;
+}
+
+.logo-gradient.large {
+  font-size: 3.5em;
+}
+
+/* ============================================
+   OPTION 2: Elegant Serif Logo
+   ============================================ */
+.logo-serif {
+  font-size: 2.8em;
+  font-weight: 800;
+  color: #005eb8;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.logo-serif .star {
+  color: #ffb81c;
+  font-size: 1.1em;
+}
+
+/* ============================================
+   OPTION 3: Solid Badge Logo
+   ============================================ */
+.logo-badge {
+  font-size: 2.5em;
+  font-weight: 900;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #005eb8 0%, #00a7e1 100%);
+  padding: 15px 25px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin: 0;
+}
+
+.logo-badge.small {
+  font-size: 1.5em;
+  padding: 10px 15px;
+}
+
+.logo-badge.large {
+  font-size: 3.5em;
+  padding: 20px 35px;
+}
+
+/* ============================================
+   OPTION 4: Magical Sparkles Logo
+   ============================================ */
+.logo-sparkles {
+  font-size: 3em;
+  font-weight: 900;
+  color: #005eb8;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.logo-sparkles::before {
+  content: '✨ ';
+  color: #ffb81c;
+  font-size: 0.9em;
+  margin-right: 5px;
+}
+
+.logo-sparkles::after {
+  content: ' ✨';
+  color: #ffb81c;
+  font-size: 0.9em;
+  margin-left: 5px;
+}
+
+/* ============================================
+   OPTION 5: Stacked Logo
+   ============================================ */
+.logo-stacked {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.logo-stacked-top {
+  font-size: 0.9em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #00a7e1;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.logo-stacked-bottom {
+  font-size: 1.8em;
+  font-weight: 900;
+  color: #005eb8;
+}
+
+/* ============================================
+   OPTION 6: Rainbow Gradient Logo
+   ============================================ */
+.logo-rainbow {
+  font-size: 2.5em;
+  font-weight: 900;
+  background: linear-gradient(to right, #005eb8, #00a7e1, #ffb81c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Size variants */
+.logo-xs {
+  font-size: 1.2em;
+}
+
+.logo-sm {
+  font-size: 1.8em;
+}
+
+.logo-md {
+  font-size: 2.5em;
+}
+
+.logo-lg {
+  font-size: 3.5em;
+}
+
+.logo-xl {
+  font-size: 4.5em;
+}
+
+/* Colors - if you need solid color instead of gradient */
+.logo-primary {
+  color: #005eb8;
+}
+
+.logo-secondary {
+  color: #00a7e1;
+}
+
+.logo-accent {
+  color: #ffb81c;
+}
+
+.logo-white {
+  color: white;
+}
+
+/* Text variations */
+.logo-bold {
+  font-weight: 900;
+}
+
+.logo-uppercase {
+  text-transform: uppercase;
+}
+
+.logo-tight {
+  letter-spacing: -1px;
+}
+
+.logo-loose {
+  letter-spacing: 2px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo-gradient {
+    font-size: 2em;
+  }
+  
+  .logo-serif {
+    font-size: 2em;
+  }
+  
+  .logo-badge {
+    font-size: 1.8em;
+    padding: 10px 20px;
+  }
+  
+  .logo-sparkles {
+    font-size: 2em;
+  }
+  
+  .logo-stacked-bottom {
+    font-size: 1.5em;
+  }
+  
+  .logo-rainbow {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-gradient {
+    font-size: 1.5em;
+  }
+  
+  .logo-serif {
+    font-size: 1.5em;
+  }
+  
+  .logo-badge {
+    font-size: 1.3em;
+    padding: 8px 15px;
+  }
+  
+  .logo-sparkles {
+    font-size: 1.5em;
+  }
+  
+  .logo-stacked-bottom {
+    font-size: 1.2em;
+  }
+  
+  .logo-rainbow {
+    font-size: 1.5em;
+  }
+}

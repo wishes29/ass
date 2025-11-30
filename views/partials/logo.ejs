@@ -1,0 +1,35 @@
+<!-- Make-A-Wish Logo Component -->
+<!-- Usage: <%- include('partials/logo', { style: 'gradient', size: 'md' }) %> -->
+
+<% 
+  const style = style || 'gradient';
+  const size = size || 'md';
+  
+  const logoClasses = `logo-${style} logo-${size}`;
+%>
+
+<% if (style === 'gradient') { %>
+  <h1 class="<%= logoClasses %>">Make-A-Wish</h1>
+
+<% } else if (style === 'serif') { %>
+  <h1 class="<%= logoClasses %>">MAKE<span class="star">★</span>WISH</h1>
+
+<% } else if (style === 'badge') { %>
+  <div class="<%= logoClasses %>">Make-A-Wish</div>
+
+<% } else if (style === 'sparkles') { %>
+  <h1 class="<%= logoClasses %>">Make-A-Wish</h1>
+
+<% } else if (style === 'stacked') { %>
+  <div class="logo-stacked">
+    <div class="logo-stacked-top">MAKE</div>
+    <div class="logo-stacked-bottom">A WISH</div>
+  </div>
+
+<% } else if (style === 'rainbow') { %>
+  <h1 class="<%= logoClasses %>">MAKE-A-WISH</h1>
+
+<% } else { %>
+  <!-- Default: Gradient -->
+  <h1 class="logo-gradient logo-<%= size %>">Make-A-Wish</h1>
+<% } %>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+<body>
+  <%- include('partials/navbar') %>
+
+  <!-- HERO -->
+  <section class="hero text-white text-center" style="background: linear-gradient(rgba(0,94,184,0.9), rgba(0,94,184,0.95)), url('/img/refer-hero.jpg') center/cover;">
+    <div class="container py-5">
+      <h1 class="display-3 fw-bold">Refer a Child for a Wish</h1>
+      <p class="lead fs-3">Know a brave child who deserves something to look forward to?</p>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0 p-5">
+            <form action="/submit-referral" method="POST">
+              <div class="row g-4">
+                <div class="col-md-6"><input type="text" name="childFirstName" class="form-control form-control-lg" placeholder="Child's First Name *" required></div>
+                <div class="col-md-6"><input type="number" name="age" class="form-control form-control-lg" placeholder="Age (3–17) *" min="3" max="17" required></div>
+                
+                <div class="col-12"><textarea name="diagnosis" class="form-control form-control-lg" rows="4" placeholder="Medical Condition / Diagnosis *" required></textarea></div>
+                
+                <div class="col-md-6"><input type="text" name="parentName" class="form-control form-control-lg" placeholder="Parent/Guardian Name *" required></div>
+                <div class="col-md-6"><input type="email" name="email" class="form-control form-control-lg" placeholder="Email Address *" required></div>
+                
+                <div class="col-12"><input type="tel" name="phone" class="form-control form-control-lg" placeholder="Phone Number (optional)"></div>
+              </div>
+              
+              <div class="text-center mt-5">
+                <button type="submit" class="btn btn-wish btn-lg px-5 shadow">Submit Referral</button>
+                <p class="text-muted mt-3">We’ll contact the family within 48 hours</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %>
+<body>
+  <%- include('partials/navbar') %>
+
+  <!-- HERO SECTION -->
+  <section class="hero text-white text-center" style="background: linear-gradient(rgba(0,94,184,0.9), rgba(0,94,184,0.95)), url('/img/stories-hero.jpg') center/cover no-repeat;">
+    <div class="container py-5">
+      <h1 class="display-3 fw-bold">Wish Stories That Inspire</h1>
+      <p class="lead">See how your support brings joy, hope, and strength to children and families</p>
+    </div>
+  </section>
+
+  <!-- WISH STORIES GRID -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Story 1 -->
+        <div class="col-lg-6">
+          <div class="card-wish h-100 border-0 shadow-lg overflow-hidden">
+            <img src="/img/stories/DW.jpg" class="card-img-top" alt="Emily">
+            <div class="card-body p-5">
+              <h3 class="text-primary">Emily, age 7</h3>
+              <h5>"I wish to go to Disney World"</h5>
+              <p class="fs-5">After two years of chemotherapy for leukemia, Emily finally met Cinderella. "It was the best day of my life," she said with the biggest smile.</p>
+              <blockquote class="text-muted fst-italic">
+                "The wish gave Emily something to look forward to during treatment. It changed everything." — Emily's mom
+              </blockquote>
+              <a href="/donate" class="btn btn-wish mt-3">Help Grant the Next Wish</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 2 -->
+        <div class="col-lg-6">
+          <div class="card-wish h-100 border-0 shadow-lg overflow-hidden">
+            <img src="/img/stories/game.jpg" class="card-img-top" alt="Jayden">
+            <div class="card-body p-5">
+              <h3 class="text-primary">Jayden, age 12</h3>
+              <h5>"I wish to have a gaming setup"</h5>
+              <p class="fs-5">Living with cystic fibrosis, Jayden wanted to play online with friends. His new computer and gaming chair brought him endless joy and connection.</p>
+              <blockquote class="text-muted fst-italic">
+                "He hasn’t stopped smiling since the wish arrived. Thank you from the bottom of our hearts." — Jayden's dad
+              </blockquote>
+              <a href="/donate" class="btn btn-wish mt-3">Make Another Wish Come True</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 3 -->
+        <div class="col-lg-6">
+          <div class="card-wish h-100 border-0 shadow-lg overflow-hidden">
+            <img src="/img/stories/unicorn.jpg" class="card-img-top" alt="Ava">
+            <div class="card-body p-5">
+              <h3 class="text-primary">Ava, age 5</h3>
+              <h5>"I wish to meet a real unicorn"</h5>
+              <p class="fs-5">Ava’s rare heart condition didn’t stop her dream. We brought a gentle white horse with a glowing horn to her backyard. Magic was real that day.</p>
+              <blockquote class="text-muted fst-italic">
+                "Ava said it was better than Christmas. Thank you for making her believe again." — Ava's mom
+              </blockquote>
+              <a href="/donate" class="btn btn-wish mt-3">Help Grant More Magic</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story 4 -->
+        <div class="col-lg-6">
+          <div class="card-wish h-100 border-0 shadow-lg overflow-hidden">
+            <img src="/img/stories/fire.jpg" class="card-img-top" alt="Mason">
+            <div class="card-body p-5">
+              <h3 class="text-primary">Mason, age 9</h3>
+              <h5>"I wish to be a firefighter for a day"</h5>
+              <p class="fs-5">Battling brain cancer, Mason got his own uniform, rode in a fire truck, and put out a "real" fire. He said he felt unstoppable.</p>
+              <blockquote class="text-muted fst-italic">
+                "This wish reminded Mason he’s a hero — no matter what." — Fire Chief
+              </blockquote>
+              <a href="/donate" class="btn btn-wish mt-3">Be a Hero Today</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-5">
+        <h3>Every child deserves a wish</h3>
+        <a href="/donate" class="btn btn-wish btn-lg px-5">Donate Now</a>
+      </div>
+    </div>
+  </section>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
